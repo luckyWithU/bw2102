@@ -1,0 +1,39 @@
+# TERRAFORM
+#  www.TerraformCorp.com
+#
+# Sample Documentation
+# https://support.atlassian.com/bitbucket-cloud/docs/deploy-to-aws-with-elastic-beanstalk/
+# 
+
+image: atlassian/default-image:2
+
+pipelines:
+  default:
+    - step:
+        name: "Zip Only"
+        script:
+          - echo "Zip Only"
+          - zip -r 2102WB-phase1_group1.zip *          
+        
+        # Define an artifact to pass the zip file to the next step
+        artifacts: 
+          - 2102WB-phase1_group1.zip
+    - step:
+        name: "Deploy to 	2102WB - Ikonicc (Group 1)"
+        # Track Deploy to 2102WB - Ikonicc (Group 1) environments.
+        deployment: staging
+        script:
+        - echo "Deploy to 	2102WB - Ikonicc (Group 1)"
+        - pipe: atlassian/aws-elasticbeanstalk-deploy:0.5.0
+          variables:
+            DEBUG: 'TRUE'
+            # upload-only is upload to S3 only, but don’t deploy to beanstalk
+            # COMMAND: 'upload-only'
+            AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID
+            AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY
+            AWS_DEFAULT_REGION: 'us-west-2'
+            APPLICATION_NAME: '2102WB - Ikonicc'
+            ENVIRONMENT_NAME: '2102wbikonicc-group-1'
+            ZIP_FILE: '2102WB-phase1_group1.zip'
+            S3_BUCKET: 'elasticbeanstalk-us-west-2-870923424064'
+            VERSION_LABEL: 'Accounts(Group 1): ${BITBUCKET_COMMIT:0:8}'

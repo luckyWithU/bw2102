@@ -1,0 +1,90 @@
+.App-logo {
+    height: 40vmin;
+    pointer-events: none;
+  }
+  
+*:focus {
+  box-shadow: none !important;
+}
+body {
+  background-color: #cfcfcf !important;
+  min-height: 100vh;
+}
+.chakra-tabs__tab[aria-selected=true] {
+  border-bottom-color: #cfcfcf !important;
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+}
+  @media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+      animation: App-logo-spin infinite 20s linear;
+    }
+  }
+  .App-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+  }
+  
+  .App-link {
+    color: #61dafb;
+  }
+  
+  @keyframes App-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .bg-grey {
+    background-color: #cfcfcf;
+  }
+  .modal-content {
+    background-color: #cfcfcf;
+  }
+  .list-btn {
+      align-items: self-end;
+      justify-content: self-end;
+      display: flex;
+  }
+  .list-btn button {
+    background-color: #FFB6B6;
+    color: #000;
+    border: 1px solid #000;
+  }
+  .list-btn button:hover {
+    background-color: #ffe3e3;
+  }
+
+  .white-color {
+    color: #fff;
+  }
+  
+  .login-page {
+    height: 100vh;
+    background-color: #ddd;
+    text-align: center;
+  }
+  .login-page .button-area {
+    display: inline-block;
+    margin-top: 40vh;
+  }
+  .login-page .logo {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+  }

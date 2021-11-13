@@ -1,0 +1,2 @@
+web: npm run stat
+worker: npm run start:worker

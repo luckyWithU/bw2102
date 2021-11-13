@@ -1,36 +1,8 @@
-<p align="center">
-    <a href="http://kitty-items-flow-testnet.herokuapp.com/">
-        <img width="400" src="kitty-items-banner.png" />
-    </a>
-</p>
-
-👋 Welcome! This demo app was created to help you learn how to build on Flow.
-
-- Kitty Items is a **complete NFT marketplace** built with [Cadence](https://docs.onflow.org/cadence), Flow's resource-oriented smart contract programming language.
-- Learn how to deploy contracts, mint NFTs, and integrate user wallets with the Flow Client Library (FCL).
-
-## 🎬 Live Demo
-
-Check out the [live demo of Kitty Items](http://kitty-items-flow-testnet.herokuapp.com/),
-deployed on the Flow Testnet.
-
-If you'd like to deploy your own version, see the [deploy to Heroku](#optional-heroku-deployment) instructions near the bottom to this setup guide.
-
-## ✨ Getting Started
-
-
-
-### 1. Install Dependencies
+## 1. Install Dependencies
 
 _🛠 This project requires `Docker`._ See: [Docker installation instructions](https://www.docker.com/get-started) <br/>
 _🛠 This project requires `NodeJS v14.x` or above._ See: [Node installation instructions](https://nodejs.org/en/) <br/>
 _🛠 This project requires `flow-cli v0.15.0` or above._ See: [Flow CLI installation instructions](https://docs.onflow.org/flow-cli)
-
-### 2. Clone the project
-
-```sh
-git clone https://github.com/onflow/kitty-items.git
-```
 ### 3. Install dependencies
 
 - Run `npm install` in the root of the project.
